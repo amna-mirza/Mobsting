@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="17">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="?attr/colorPrimary">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/colorPrimary"
+            android:textAlignment="center"
+            android:title="Video Slow Demo"
+            android:titleTextColor="@android:color/white"
+            android:titleTextAppearance="@android:color/white">
+
+        </android.support.v7.widget.Toolbar>
+
+        <Button
+            android:id="@+id/btn_saveTrim"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0"
+            android:background="?attr/colorPrimary"
+            android:text="Preview" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="6">
+
+        <VideoView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:text="Set Playback Speed"
+        android:textStyle="bold" />
+
+    <SeekBar
+        android:id="@+id/sb_videoSpeed"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:max="200"></SeekBar>
+
+    <TextView
+        android:id="@+id/tv_videoSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight=".5"
+        android:text="Speed = 1.0f"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:background="#090909"
+        android:gravity="center"
+        android:text="Select range to change playback of video"
+        android:textColor="#faf4f4"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/ll_rangeSelection"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="1.5"
+        android:background="@android:color/white"
+        android:paddingBottom="0dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <HorizontalScrollView
+            android:id="@+id/hsv_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:background="#080909">
+
+            <LinearLayout
+                android:id="@+id/ll_videoFrames"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <io.vov.vitamio.widget.CenterLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <io.vov.vitamio.widget.VideoView
+            android:id="@+id/surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"></io.vov.vitamio.widget.VideoView>
+    </io.vov.vitamio.widget.CenterLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0"
+        android:orientation="vertical"
+        android:padding="0dp"
+        android:visibility="invisible">
+
+        <RelativeLayout
+            android:id="@+id/ll_trimrangeSelection"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="2"
+            android:background="@android:color/white"
+            android:paddingBottom="0dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".5"
+            android:background="#090909"
+            android:gravity="center"
+            android:text="Select range to trim video"
+            android:textColor="#faf4f4"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/ll_rangeSelection"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content" />-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/ll_rangeSelection"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="20dp"/>-->
+
+</LinearLayout>

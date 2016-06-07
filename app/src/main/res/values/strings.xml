@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Mobsting</string>
+
+    <string name="preapring_trim">Loading Trim video</string>
+    <string name="loading_frames_for_trimm">Loading Video</string>
+    <string name="processin_image">Applying slow effect on selected part.</string>
+    <string name="description">stop.</string>
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <!--<android.support.v7.widget.Toolbar-->
+        <!--android:id="@+id/toolbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="80dp"-->
+        <!--android:title="Video Slow Demo"-->
+        <!--android:titleTextAppearance="@android:color/white"-->
+        <!--android:textAlignment="center"-->
+        <!--android:background="?attr/colorPrimary">-->
+
+        <!--</android.support.v7.widget.Toolbar>-->
+
+
+        <Button
+            android:id="@+id/btn_slow"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:background="@drawable/save"
+            android:visibility="visible"/>
+
+        <LinearLayout
+            android:id="@+id/videoview"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <io.vov.vitamio.widget.CenterLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <io.vov.vitamio.widget.VideoView
+                    android:id="@+id/surface_view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true" />
+            </io.vov.vitamio.widget.CenterLayout>
+        </LinearLayout>
+
+
+</LinearLayout>

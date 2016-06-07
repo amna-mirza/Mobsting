@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "mediacutter.camera.asilesoft.mediacutter"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:support-v4:23.1.1'
+    compile 'com.edmodo:cropper:1.0.1' //croper library
+    compile 'com.googlecode.mp4parser:isoparser:1.0.5.4'//trim library
+    compile 'com.yahoo.mobile.client.android.util.rangeseekbar:rangeseekbar-library:0.1.0' //range bar use in trim activity
+    compile 'de.hdodenhof:circleimageview:1.2.1'//circle image library
+    compile 'com.google.android.gms:play-services:4.2.42'//map library
+    compile 'me.neavo:vitamio:4.2.2'
+    compile 'com.github.hiteshsondhi88.libffmpeg:FFmpegAndroid:0.2.5'
+    compile 'io.apptik.widget:multislider:1.2'
+}
